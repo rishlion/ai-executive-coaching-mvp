@@ -94,9 +94,12 @@ if scenario_tab == "Role-Play Scenarios":
 else:
     # Standard coaching chat interface
     st.header("Example Prompts..")
-    st.write("tests")
-    st.write("tests")
-
+    st.markdown("**Example Prompts:")
+    st.markdown("*How do I provide constructive feedback to a high-performing employee whose behavior is negatively affecting team morale?*")
+    st.markdown("*What are some strategies to boost motivation and productivity in my fully remote team?*")   
+    st.markdown("*I have an upcoming one-on-one to discuss performance concerns. What's the best way to approach this conversation sensitively and effectively?*")
+    st.markdown("*I’m overwhelmed by my current workload and competing priorities. How can I prioritize tasks more effectively as a manager?*")
+    
     
     for message in st.session_state.messages:
         with st.chat_message(message["role"]):
