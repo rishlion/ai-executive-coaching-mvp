@@ -40,7 +40,7 @@ scenarios = {
 }
 
 # Main Interface
-st.title("AI Coaching Assistant :rocket:")
+st.title("Mento :rocket:")
 
 # Initialize chat history
 if "messages" not in st.session_state:
@@ -93,9 +93,9 @@ if scenario_tab == "Role-Play Scenarios":
 
 else:
     # Standard coaching chat interface
-    st.markdown(":blue-background[Welcome! Can you tell me more about the issue or challenge you would like to work on today?]")
+    st.markdown(":blue-background[Welcome to Mento! A place to discuss and explore ideas in a safe space. Can you tell me more about the issue or challenge you would like to work on today?]")
     st.markdown(" ")
-    st.markdown("**Example Prompts:**")
+    st.markdown("**Example discussion topics:**")
     st.markdown("*How do I provide constructive feedback to a high-performing employee whose behavior is negatively affecting team morale?*")
     st.markdown("*What are some strategies to boost motivation and productivity in my fully remote team?*")   
     st.markdown("*I have an upcoming one-on-one to discuss performance concerns. What's the best way to approach this conversation sensitively and effectively?*")
