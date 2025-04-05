@@ -115,14 +115,15 @@ else:
                 full_prompt = (
                     f"You are an executive coach helping Warren, a {manager_level.lower()} in a "
                     f"{company_size.lower()} company within the {industry.lower()} industry. "
-                    f"First provide an empathetic 1 line summary of their ask and their industry, company size, and manager level. Then, ask them 1 clarifying question on their challenge.\n\n"
-                    # f"Before proceeding to provide practical, clear, and actionable advice to address the following challenge:\n\n"
+                    # f"First provide an empathetic 1 line summary of their ask and their industry, company size, and manager level. Then, ask them 1 clarifying question on their challenge.\n\n"
+                    # f"Once they respond to your question once, then continue the conversation normally.\n\n"
+                    f"Provide practical, clear, and actionable advice to address the following challenge:\n\n"
                     f"{prompt}"
                 )
                 try:
                     response = client.responses.create(
                         model="gpt-4o",
-                        instructions="Provide empathetic, actionable, and concise executive coaching advice.",
+                        instructions="Provide empathetic, actionable, and concise executive coaching advice. First provide an empathetic 1 line summary of their ask and their industry, company size, and manager level. Then, ask them 1 clarifying question on their challenge. Once they respond to your question once, then continue the conversation normally.",
                         input=full_prompt,
                     )
                     advice = response.output_text
