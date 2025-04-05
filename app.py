@@ -123,7 +123,7 @@ else:
                 try:
                     response = client.responses.create(
                         model="gpt-4o",
-                        instructions="Provide empathetic, actionable, and concise executive coaching advice. First provide an empathetic 1 line summary of their ask and their industry, company size, and manager level. Then, ask them 1 clarifying question on their challenge. Once they respond to your question once, then continue the conversation normally.",
+                        instructions="Provide empathetic, actionable, and concise executive coaching advice.",
                         input=full_prompt,
                     )
                     advice = response.output_text
