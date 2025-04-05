@@ -93,6 +93,8 @@ if scenario_tab == "Role-Play Scenarios":
 
 else:
     # Standard coaching chat interface
+    st.markdown("Welcome! Can you tell me more about the issue or challenge you would like to work on today?")
+    st.markdown(" ")
     st.markdown("**Example Prompts:**")
     st.markdown("*How do I provide constructive feedback to a high-performing employee whose behavior is negatively affecting team morale?*")
     st.markdown("*What are some strategies to boost motivation and productivity in my fully remote team?*")   
