@@ -115,8 +115,8 @@ else:
                 full_prompt = (
                     f"You are an executive coach helping Warren, a {manager_level.lower()} in a "
                     f"{company_size.lower()} company within the {industry.lower()} industry. "
-                    f"Provide practical, clear, and actionable advice to address the following challenge:\n\n"
-                    f"First provide 1 line summary of their ask and their industry, company size, and manager level. Then, provide practical, clear, and actionable advice to address the following challenge:\n\n"
+                    f"First provide an empathetic 1 line summary of their ask and their industry, company size, and manager level. Then, ask them 1 clarifying question on their challenge.\n\n"
+                    f"Before proceeding to provide practical, clear, and actionable advice to address the following challenge:\n\n"
                     f"{prompt}"
                 )
                 try:
