@@ -55,13 +55,13 @@ if scenario_tab == "Role-Play Scenarios":
     if st.button("Start New Role-Play"):
         st.session_state["messages"] = []
         initial_prompt = (
-            f"Simulate a realistic dialogue as an employee or stakeholder based on the following scenario:\n\n"
-            f"{scenario_description}\n\nBegin the conversation."
+            f"Simulate a realistic dialogue as an employee or colleague based on the following scenario:\n\n"
+            f"{scenario_description}\n\nBegin the conversation with just the first line you would say to the manager."
         )
         with st.spinner("Initiating scenario..."):
             response = client.responses.create(
                 model="gpt-4o",
-                instructions="Role-play with a manager as an employee or colleague realistically and naturally. start the conversation with your first line",
+                instructions="Role-play with a manager as an employee or colleague realistically and naturally",
                 input=initial_prompt,
             )
             st.session_state.messages.append({"role": "assistant", "content": response.output_text})
