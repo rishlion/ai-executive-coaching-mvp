@@ -113,9 +113,10 @@ else:
         with st.chat_message("assistant"):
             with st.spinner("Generating tailored coaching advice..."):
                 full_prompt = (
-                    f"You are an executive coach helping a {manager_level.lower()} in a "
+                    f"You are an executive coach helping Warren, a {manager_level.lower()} in a "
                     f"{company_size.lower()} company within the {industry.lower()} industry. "
                     f"Provide practical, clear, and actionable advice to address the following challenge:\n\n"
+                    f"First provide 1 line summary of their ask and their industry, company size, and manager level. Then, provide practical, clear, and actionable advice to address the following challenge:\n\n"
                     f"{prompt}"
                 )
                 try:
