@@ -93,6 +93,11 @@ if scenario_tab == "Role-Play Scenarios":
 
 else:
     # Standard coaching chat interface
+    st.header("Example Prompts..")
+    st.write("tests")
+    st.write("tests")
+
+    
     for message in st.session_state.messages:
         with st.chat_message(message["role"]):
             st.write(message["content"])
