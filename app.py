@@ -55,7 +55,7 @@ if scenario_tab == "Role-Play Scenarios":
     if st.button("Start New Role-Play"):
         st.session_state["messages"] = []
         initial_prompt = (
-            f"Simulate a realistic dialogue as an employee or colleague named Rishabh, talking to their manager names Warren based on the following scenario:\n\n"
+            f"Simulate a realistic conversation as an employee or colleague named Rishabh, talking to their manager named Warren who is the user based on the following scenario:\n\n"
             f"{scenario_description}\n\nBegin the conversation with just the first line you would say to the manager."
         )
         with st.spinner("Initiating scenario..."):
