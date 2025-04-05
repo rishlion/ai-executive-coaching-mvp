@@ -40,8 +40,7 @@ scenarios = {
 }
 
 # Main Interface
-st.title("AI Coaching Chat &mdash;\
-            :rocket:")
+st.title("AI Coaching Assistant :rocket:")
 
 # Initialize chat history
 if "messages" not in st.session_state:
