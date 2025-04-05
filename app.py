@@ -33,10 +33,10 @@ st.sidebar.info("Customize your profile to receive personalized coaching advice.
 
 # Predefined role-play scenarios
 scenarios = {
-    "Giving Tough Feedback": "You're giving feedback to a talented employee whose recent performance has declined.",
-    "Motivating a Disengaged Team Member": "You have a high-performing team member who recently appears disengaged.",
+    "Giving Tough Feedback": "Employee is coming in for a performance review. Manager is giving feedback to a talented employee whose recent performance has declined.",
+    "Motivating a Disengaged Team Member": "High-performing team member feeling disengaged comes to talk to their manager.",
     "Resolving Conflict": "Two key team members have ongoing conflicts affecting team morale.",
-    "Preparing for a Difficult Meeting": "You must present a challenging update in an upcoming meeting with stakeholders."
+    "Preparing for a Difficult Meeting": "Manager talking to their colleague in preparation for a challenging update in an upcoming meeting with the leadership team."
 }
 
 # Main Interface
@@ -61,7 +61,7 @@ if scenario_tab == "Role-Play Scenarios":
         with st.spinner("Initiating scenario..."):
             response = client.responses.create(
                 model="gpt-4o",
-                instructions="Role-play as an employee or stakeholder realistically and naturally.",
+                instructions="Role-play with a manager as an employee or colleague realistically and naturally. start the conversation with your first line",
                 input=initial_prompt,
             )
             st.session_state.messages.append({"role": "assistant", "content": response.output_text})
@@ -83,7 +83,7 @@ if scenario_tab == "Role-Play Scenarios":
                 try:
                     follow_up_response = client.responses.create(
                         model="gpt-4o",
-                        instructions="Continue the realistic role-play as an employee or stakeholder based on the dialogue provided.",
+                        instructions="Continue the realistic role-play as an employee initiating a conversation with their manager based on the dialogue provided.",
                         input=conversation_history,
                     )
                     st.write(follow_up_response.output_text)
